@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . '/Category.php';
+require_once __DIR__ . '/Games.php';
+require_once __DIR__ . '/Food.php';
 class Products {
     public $title;
     public $price;

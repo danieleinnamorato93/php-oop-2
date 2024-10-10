@@ -10,7 +10,7 @@ class Category {
     public function getName(){
         return $this->name;
     }
-    public function getIcon(){
+    public function getImg(){
         return $this->img;
     }
 }
