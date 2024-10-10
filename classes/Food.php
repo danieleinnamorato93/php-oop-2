@@ -4,9 +4,9 @@ require_once __DIR__ . '/Products.php';
 class Food extends Products {
 public $taste ;
 
-public function __construct($title ,$price ,$category ,$kindOfProduct , $weight, string $taste)
+public function __construct(string $title ,float $price ,Category $category , $weight, string $taste)
 {
-    parent::__construct();
+    parent::__construct($title,$price, $category, $weight);
     $this->taste = $taste ;
    
 }

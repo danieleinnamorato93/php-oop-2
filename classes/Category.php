@@ -2,7 +2,7 @@
 class Category {
     public $name ;
     public $img ;
-    public function __construct(string $name ,$img)
+    public function __construct(string $name ,string $img)
     {
         $this->name = $name;
         $this->img = $img;
@@ -11,6 +11,6 @@ class Category {
         return $this->name;
     }
     public function getIcon(){
-        return $this->icon;
+        return $this->img;
     }
 }
