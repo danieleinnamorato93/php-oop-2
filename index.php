@@ -18,6 +18,9 @@ $games = new Games("Tiragraffi", 30 , $gatti, 6, "sisal");
 
 $letto = new Products("Letto per cani insonni",400,$cani, 50);
 
+//*Prova funzionamento Exception) $nulla = new Products("None",-10,$gatti, 50);
+//*var_dump($nulla);
+
 $osso = new Games("Osso per cani", 7 , $cani, 0.70, "gommapiuma");
 $tiragraffi = new Games("Tiragraffi", 30 , $gatti, 6, "sisal");
 
@@ -26,6 +29,7 @@ $scatoletta  = new Food("Scatoletta", 2.0,$gatti, 0.70,"salmone");
 
 $astronave = new Kennel("Cuccia-astronave per il vostro cane spaziale! ",  180, $cani, 90 ,"molto comoda!");
 $aereoplano = new Kennel("Lettino-aereo per il vostro felino aviatore! ",  100, $gatti, 60 ,"più che comoda!");
+
 
 $products= [$osso, $tiragraffi,$crocchette,$scatoletta, $letto, $astronave, $aereoplano ];
 //var_dump($products);
@@ -73,7 +77,9 @@ $products= [$osso, $tiragraffi,$crocchette,$scatoletta, $letto, $astronave, $aer
                     <?php if(isset($product->comfort)){?>
                     <h3>Comodità: <?php echo $product->comfort ?> </h3>
                     <?php } ?>
+                    <!--Uso del Trait-->
                     <h3><?php echo $product->greetCustomer(); ?> </h3>
+
 
 
                 </div>

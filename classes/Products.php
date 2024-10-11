@@ -15,6 +15,8 @@ class Products {
         $this->price = $price ;
         $this->category = $category ;
         $this->weight = $weight ;
+
+        $this->checkPrice($price);
     }
     
     public function getTitle(): string {
@@ -55,4 +57,11 @@ class Products {
     public function showCard(): string {
         return "$this->title";
     }
-}
+    //!Inserimento Exception!
+    public function checkPrice(float $price): void {
+        if ($price < 0) {
+            throw new InvalidProductException("Il prezzo non può mai essere inferiore a 0 €");
+        }
+        }
+    }
+   
