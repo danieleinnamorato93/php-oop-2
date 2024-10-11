@@ -1,13 +1,13 @@
 <?php
+require_once __DIR__ . '/../traits/Greetable.php';
 require_once __DIR__ . '/Category.php';
-require_once __DIR__ . '/Games.php';
-require_once __DIR__ . '/Food.php';
-require_once __DIR__ . '/Kennel.php';
 class Products {
     public $title;
     public $price;
     public Category $category;
     public $weight;
+
+    use Greetable;
 
     public function __construct(string $title ,float $price, Category $category, float $weight )
     {

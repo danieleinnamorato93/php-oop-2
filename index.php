@@ -5,6 +5,7 @@ require_once __DIR__ . '/classes/Games.php';
 require_once __DIR__ . '/classes/Food.php';
 require_once __DIR__ .  '/classes/Kennel.php';
 
+
 $cani = new Category("Cani", "https://www.repstatic.it/content/contenthub/img/2024/10/07/124609127-f7162860-76a0-4047-8d82-6b8ac4a2ce10.jpg");
 //var_dump($cani);
 $gatti = new Category("Gatti", "https://www.viridea.it/wp-content/uploads/2019/06/consiglio-cosa-fare-casa-arriva-gatto.jpg");
@@ -27,7 +28,7 @@ $astronave = new Kennel("Cuccia-astronave per il vostro cane spaziale! ",  180, 
 $aereoplano = new Kennel("Lettino-aereo per il vostro felino aviatore! ",  100, $gatti, 60 ,"più che comoda!");
 
 $products= [$osso, $tiragraffi,$crocchette,$scatoletta, $letto, $astronave, $aereoplano ];
-var_dump($products);
+//var_dump($products);
 
 
 
@@ -72,6 +73,8 @@ var_dump($products);
                     <?php if(isset($product->comfort)){?>
                     <h3>Comodità: <?php echo $product->comfort ?> </h3>
                     <?php } ?>
+                    <h3><?php echo $product->greetCustomer(); ?> </h3>
+
 
                 </div>
 
