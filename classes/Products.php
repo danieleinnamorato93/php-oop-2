@@ -16,8 +16,42 @@ class Products {
         $this->weight = $weight ;
     }
     
- public function showCard(){
-    return "$this->title";
-    } 
+    public function getTitle(): string {
+        return $this->title;
+    }
 
+    public function setTitle(string $title): void {
+        $this->title = $title;
+    }
+
+    // Getter and Setter for price
+    public function getPrice(): float {
+        return $this->price;
+    }
+
+    public function setPrice(float $price): void {
+        $this->price = $price;
+    }
+
+    // Getter and Setter for category
+    public function getCategory(): Category {
+        return $this->category;
+    }
+
+    public function setCategory(Category $category): void {
+        $this->category = $category;
+    }
+
+    // Getter and Setter for weight
+    public function getWeight(): float {
+        return $this->weight;
+    }
+
+    public function setWeight(float $weight): void {
+        $this->weight = $weight;
+    }
+
+    public function showCard(): string {
+        return "$this->title";
+    }
 }
