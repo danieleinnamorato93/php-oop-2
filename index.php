@@ -63,8 +63,8 @@ var_dump($products);
                     <h3>Nome: <?php echo $product->title; ?> </h3>
                     <h3>Prezzo: <?php echo $product->price; ?>€ </h3>
                     <h3>Peso: <?php echo $product->weight; ?> kg</h3>
-                    <h3>Materiale: <?php echo $product->material; ?> </h3>
-                    <h3>Gusto: <?php echo $product->taste; ?> </h3>
+                    <h3>Materiale: <?php echo $product->material ?> </h3>
+                    <h3>Gusto: <?php echo $product->taste ?> </h3>
 
                 </div>
 

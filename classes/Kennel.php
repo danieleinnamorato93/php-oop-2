@@ -11,4 +11,13 @@ public function __construct(string $title ,float $price ,Category $category , fl
    
 }
 
+    // Getter and Setter for comfort
+    public function getComfort(): string {
+        return $this->comfort;
+    }
+
+    public function setComfort(string $comfort): void {
+        $this->comfort = $comfort;
+    }
+
 }

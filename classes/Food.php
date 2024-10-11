@@ -14,4 +14,13 @@ public function printCard(){
     parent::printCard();
     echo "<h4>: {$this->$taste}</h4>";
 }
+
+   // Getter and Setter for taste
+   public function getTaste(): string {
+    return $this->taste;
+}
+
+public function setTaste(string $taste): void {
+    $this->taste = $taste;
+}
 }
