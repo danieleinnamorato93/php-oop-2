@@ -14,12 +14,12 @@ $gatti = new Category("Gatti", "https://www.viridea.it/wp-content/uploads/2019/0
 $games = new Games("Tiragraffi", 30 , $gatti, 6, "sisal");
 //var_dump($games); */
 
-$products= [];
-$products [] = new Games("Osso per cani", 7 , $cani, 0.70, "gommapiuma");
-$products [] = new Games("Tiragraffi", 30 , $gatti, 6, "sisal");
-$products [] = new Food("Crocchette", 1.50,$cani, 1,"pollo");
-$products [] = new Food("Scatoletta", 2.0,$gatti, 0.70,"salmone");
 
+$osso = new Games("Osso per cani", 7 , $cani, 0.70, "gommapiuma");
+$tiragraffi = new Games("Tiragraffi", 30 , $gatti, 6, "sisal");
+$crocchette = new Food("Crocchette", 1.50,$cani, 1,"pollo");
+$scatoletta  = new Food("Scatoletta", 2.0,$gatti, 0.70,"salmone");
+$products= [$osso, $tiragraffi,$crocchette,$scatoletta ];
 
 
 
@@ -55,6 +55,8 @@ $products [] = new Food("Scatoletta", 2.0,$gatti, 0.70,"salmone");
                     <h3>Nome: <?php echo $product->title; ?> </h3>
                     <h3>Prezzo: <?php echo $product->price; ?>€ </h3>
                     <h3>Peso: <?php echo $product->weight; ?> kg</h3>
+                    <h3>Materiale: <?php echo $product->material; ?> </h3>
+                    <h3>Gusto: <?php echo $product->taste; ?> </h3>
 
                 </div>
 
