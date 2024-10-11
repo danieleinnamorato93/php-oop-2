@@ -3,10 +3,11 @@ require_once __DIR__ . '/classes/Category.php';
 require_once __DIR__ . '/classes/Products.php';
 require_once __DIR__ . '/classes/Games.php';
 require_once __DIR__ . '/classes/Food.php';
+require_once __DIR__ .  '/classes/Kennel.php';
 
-$cani = new Category("Cani", "https://www.repstatic.it/content/contenthub/img/2024/10/07/124609127-f7162860-76a0-4047-8d82-6b8ac4a2ce10.jpg" );
+$cani = new Category("Cani", "https://www.repstatic.it/content/contenthub/img/2024/10/07/124609127-f7162860-76a0-4047-8d82-6b8ac4a2ce10.jpg");
 //var_dump($cani);
-$gatti = new Category("Gatti", "https://www.viridea.it/wp-content/uploads/2019/06/consiglio-cosa-fare-casa-arriva-gatto.jpg" );
+$gatti = new Category("Gatti", "https://www.viridea.it/wp-content/uploads/2019/06/consiglio-cosa-fare-casa-arriva-gatto.jpg");
 //var_dump($gatti);
 
 /*$games = new Games("Osso per cani", 7 , $cani, 0.70, "gommapiuma");
@@ -14,12 +15,19 @@ $gatti = new Category("Gatti", "https://www.viridea.it/wp-content/uploads/2019/0
 $games = new Games("Tiragraffi", 30 , $gatti, 6, "sisal");
 //var_dump($games); */
 
+$letto = new Products("Letto per cani insonni",400,$cani, 50);
 
 $osso = new Games("Osso per cani", 7 , $cani, 0.70, "gommapiuma");
 $tiragraffi = new Games("Tiragraffi", 30 , $gatti, 6, "sisal");
+
 $crocchette = new Food("Crocchette", 1.50,$cani, 1,"pollo");
 $scatoletta  = new Food("Scatoletta", 2.0,$gatti, 0.70,"salmone");
-$products= [$osso, $tiragraffi,$crocchette,$scatoletta ];
+
+$astronave = new Kennel("Cuccia-astronave per il vostro cane spaziale! ",  180, $cani, 90 ,"molto comoda!");
+$aereoplano = new Kennel("Lettino-aereo per il vostro felino aviatore! ",  100, $gatti, 60 ,"più che comoda!");
+
+$products= [$osso, $tiragraffi,$crocchette,$scatoletta, $letto, $astronave, $aereoplano ];
+var_dump($products);
 
 
 
